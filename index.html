@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bon | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Bon</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm <span class="highlight">Bon</span></h1>
+            <p class="subtitle">Web Developer &amp; Creative Problem Solver</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn primary">View My Work</a>
+                <a href="#contact" class="btn secondary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="section-title">
+            <h2>About Me</h2>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <p>
+                    I'm a passionate web developer based in <strong>Naga, Bicol</strong>, Philippines. 
+                    I love turning ideas into clean, functional, and beautiful digital experiences.
+                </p>
+                <p>
+                    With a strong focus on modern web technologies, I build responsive and user-friendly websites.
+                </p>
+                <div class="skills">
+                    <h3>Skills</h3>
+                    <div class="skill-tags">
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">UI/UX Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="section-title">
+            <h2>Featured Projects</h2>
+        </div>
+        <div class="projects-grid">
+            
+            <!-- E-Commerce Project (R18) -->
+            <div class="project-card">
+                <div class="project-image">
+                    <div class="placeholder-img">R18 E-Commerce</div>
+                </div>
+                <div class="project-info">
+                    <h3>E-Commerce Platform (R18)</h3>
+                    <p>Adult-oriented online store built as a static website for demonstration purposes.</p>
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <button onclick="showProjectModal()" class="project-link">View Project →</button>
+                </div>
+            </div>
+
+            <!-- Other projects remain the same -->
+            <div class="project-card">
+                <div class="project-image">
+                    <div class="placeholder-img">Project 2</div>
+                </div>
+                <div class="project-info">
+                    <h3>Task Management App</h3>
+                    <p>Beautiful and intuitive todo app with drag & drop functionality.</p>
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JS</span>
+                    </div>
+                    <a href="#" class="project-link">View Project →</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <div class="placeholder-img">Project 3</div>
+                </div>
+                <div class="project-info">
+                    <h3>Personal Finance Tracker</h3>
+                    <p>Track expenses and income with clean dashboard and charts.</p>
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JS</span>
+                    </div>
+                    <a href="#" class="project-link">View Project →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>E-Commerce Platform (R18)</h2>
+            <p><strong>Important Disclaimer:</strong></p>
+            <p>This is a <strong>static demonstration website</strong> created for portfolio purposes only.</p>
+            <p>It contains adult (R18) content and is intended strictly for showcasing web development skills.</p>
+            <br>
+            <p><strong>Note:</strong> This project is fictional and not a real commercial store.</p>
+            
+            <div class="modal-buttons">
+                <button onclick="closeModal()" class="btn secondary">Cancel</button>
+                <button onclick="goToProject()" class="btn primary">Proceed to Website</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-title">
+            <h2>Get In Touch</h2>
+        </div>
+        <div class="contact-content">
+            <p>I'm currently open for new opportunities and exciting projects.</p>
+            <a href="mailto:your.email@example.com" class="btn primary">Email Me</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Bon. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
