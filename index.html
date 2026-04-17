@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">Bon</div>
@@ -16,6 +15,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#apps">Apps & System</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="hamburger">
@@ -24,7 +24,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Hi, I'm <span class="highlight">Bon</span></h1>
@@ -36,7 +35,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="about">
         <div class="section-title">
             <h2>About Me</h2>
@@ -63,14 +61,12 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="section-title">
             <h2>Featured Projects</h2>
         </div>
         <div class="projects-grid">
             
-            <!-- E-Commerce Project (R18) -->
             <div class="project-card">
                 <div class="project-image">
                     <div class="placeholder-img">R18 E-Commerce</div>
@@ -83,11 +79,10 @@
                         <span>CSS</span>
                         <span>JavaScript</span>
                     </div>
-                    <button onclick="showProjectModal()" class="project-link">View Project →</button>
+                    <button onclick="showProjectModal()" class="project-link" style="background:none; border:none; padding:0; font: inherit; cursor: pointer;">View Project →</button>
                 </div>
             </div>
 
-            <!-- Other projects remain the same -->
             <div class="project-card">
                 <div class="project-image">
                     <div class="placeholder-img">Project 2</div>
@@ -122,7 +117,46 @@
         </div>
     </section>
 
-    <!-- Project Modal -->
+    <section id="apps" class="projects">
+        <div class="section-title">
+            <h2>Apps & System</h2>
+        </div>
+        <div class="projects-grid">
+            
+            <div class="project-card">
+                <div class="project-image">
+                    <div class="placeholder-img" style="background: #e9ecef; color: #2c3e50;">RONAOPOS</div>
+                </div>
+                <div class="project-info">
+                    <h3>Point of Sale (POS) App</h3>
+                    <p>A comprehensive, user-friendly POS system designed to streamline inventory management, track daily sales, and optimize business retail operations efficiently.</p>
+                    <div class="project-tags">
+                        <span>Java</span>
+                        <span>Desktop App</span>
+                        <span>Database</span>
+                    </div>
+                    <a href="#download" class="project-link">Go to Download →</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="download" class="about" style="background-color: #fff;">
+        <div class="section-title">
+            <h2>Downloads</h2>
+        </div>
+        <div style="text-align: center; max-width: 600px; margin: 0 auto; padding: 2.5rem; border: 1px solid #eee; border-radius: 16px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); background: #f8f9fa;">
+            <h3 style="color: #2c3e50; margin-bottom: 1rem;">RONAOPOS - Latest Version</h3>
+            <p style="margin-bottom: 2rem; color: #666;">Download the full application package here. The ZIP file contains the executable, bundled JRE, and setup instructions.</p>
+            
+            <a href="https://github.com/glzzjhn-byte/Glzz-Home/releases/download/v1.0/RONAOPOS_v1.0.zip" class="btn primary" style="display: inline-flex; align-items: center; gap: 8px;">
+             <i class="fas fa-download"></i> Download RONAOPOS v1.0
+            </a>
+            
+        </div>
+    </section>
+
     <div id="projectModal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal()">&times;</span>
@@ -134,20 +168,19 @@
             <p><strong>Note:</strong> This project is fictional and not a real commercial store.</p>
             
             <div class="modal-buttons">
-                <button onclick="closeModal()" class="btn secondary">Cancel</button>
+                <button onclick="closeModal()" class="btn secondary" style="color: #333; border-color: #ccc;">Cancel</button>
                 <button onclick="goToProject()" class="btn primary">Proceed to Website</button>
             </div>
         </div>
     </div>
 
-    <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="section-title">
-            <h2>Get In Touch</h2>
+            <h2 style="color: white;">Get In Touch</h2>
         </div>
         <div class="contact-content">
             <p>I'm currently open for new opportunities and exciting projects.</p>
-            <a href="mailto:your.email@example.com" class="btn primary">Email Me</a>
+            <a href="mailto:your.email@example.com" class="btn primary" style="background: white; color: #2c3e50;">Email Me</a>
         </div>
     </section>
 
