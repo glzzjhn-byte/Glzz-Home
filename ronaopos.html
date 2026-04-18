@@ -3,28 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RONAOPOS v1.0 | Details & Download</title>
+    <title>RONAOPOS | Releases & Downloads</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
-        /* A few specific styles just for this standalone page to look neat */
-        .details-container {
-            max-width: 800px; 
-            margin: 0 auto; 
-            padding: 3rem; 
-            border: 1px solid #eee; 
-            border-radius: 16px; 
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
-            background: #f8f9fa;
+        /* Base Container */
+        .main-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            min-height: 80vh;
         }
-        .details-container h3 {
+
+        /* Views */
+        .view-section {
+            display: none; /* Hidden by default */
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        .view-section.active {
+            display: block; /* Shows active view */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- HUB VIEW STYLES --- */
+        .version-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .version-item {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        .version-item:hover {
+            border-color: #3498db;
+            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.1);
+            transform: translateX(5px);
+        }
+        .version-info h3 {
+            margin: 0 0 0.5rem 0;
             color: #2c3e50;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            border-bottom: 2px solid #e9ecef;
-            padding-bottom: 0.5rem;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
-        .details-container ul {
+        .version-info p {
+            margin: 0;
+            color: #7f8c8d;
+            font-size: 0.95rem;
+        }
+        .badge {
+            font-size: 0.75rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .badge.latest { background: #e1f0fa; color: #2980b9; }
+        .badge.legacy { background: #f1f2f6; color: #7f8c8d; }
+
+        /* --- DOWNLOAD PAGE STYLES --- */
+        .back-btn {
+            background: none;
+            border: none;
+            color: #3498db;
+            font-size: 1rem;
+            cursor: pointer;
+            padding: 0;
+            margin-bottom: 2rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+        }
+        .back-btn:hover { text-decoration: underline; }
+        
+        .details-container {
+            background: #f8f9fa;
+            border: 1px solid #eee;
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .details-container h2 {
+            margin-top: 0;
+            color: #2c3e50;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .details-list {
             list-style-position: inside;
             color: #555;
             line-height: 1.8;
@@ -38,6 +120,53 @@
             color: #2d3436;
             border-left: 5px solid #fdcb6e;
         }
+
+        /* Download Grid */
+        .download-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+            border-top: 1px solid #e9ecef;
+            padding-top: 2rem;
+        }
+        .download-card {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+        }
+        .download-card h4 {
+            color: #2c3e50;
+            margin: 1rem 0 0.5rem 0;
+        }
+        .download-card p {
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            margin-bottom: 1.5rem;
+            min-height: 40px;
+        }
+        .btn-dl {
+            display: block;
+            width: 100%;
+            padding: 12px 0;
+            text-align: center;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            box-sizing: border-box;
+        }
+        .btn-dl.primary { background-color: #3498db; color: white; }
+        .btn-dl.primary:hover { background-color: #2980b9; }
+        .btn-dl.secondary { background-color: #7f8c8d; color: white; }
+        .btn-dl.secondary:hover { background-color: #636e72; }
+        .btn-dl.disabled {
+            background-color: #ecf0f1;
+            color: #95a5a6;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
     </style>
 </head>
 <body>
@@ -50,50 +179,142 @@
         </div>
     </nav>
 
-    <section class="about" style="margin-top: 80px; min-height: 80vh;">
-        <div class="section-title">
-            <h2>RONAOPOS v1.0</h2>
-        </div>
-        
-        <div class="details-container">
-            <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
-                A comprehensive, user-friendly Point of Sale (POS) system designed to streamline inventory management, track daily sales, and optimize business retail operations efficiently.
-            </p>
+    <section style="margin-top: 80px;">
+        <div class="main-container">
             
-            <h3><i class="fas fa-star"></i> Features</h3>
-            <ul>
-                <li>Streamlined Inventory Management</li>
-                <li>Real-time Daily Sales Tracking</li>
-                <li>Intuitive and User-Friendly Interface</li>
-                <li>Reliable Database Integration</li>
-                </ul>
+            <div id="hubView" class="view-section active">
+                <div class="section-title">
+                    <h2>RONAOPOS Downloads</h2>
+                    <p style="text-align: center; color: #7f8c8d; margin-top: -10px; margin-bottom: 30px;">Select a release version below to view details and download.</p>
+                </div>
 
-            <h3><i class="fas fa-bug"></i> Known Bugs</h3>
-            <ul>
-                <li><em>Currently monitoring for bugs. If you encounter any, please report them.</em></li>
-                </ul>
+                <div class="version-list">
+                    <div class="version-item" onclick="switchView('v111View')">
+                        <div class="version-info">
+                            <h3>v1.1.1 Update <span class="badge latest">Latest Stable</span></h3>
+                            <p>Includes deletion bug fixes and performance optimizations.</p>
+                        </div>
+                        <i class="fas fa-chevron-right" style="color: #bdc3c7;"></i>
+                    </div>
 
-            <div class="alert-box">
-                <strong><i class="fas fa-lock"></i> Important Admin Access:</strong><br><br>
-                To access the admin panel on this v1.0 release, please use <strong>JohnRonao</strong> as the password.
+                    <div class="version-item" onclick="switchView('v10View')">
+                        <div class="version-info">
+                            <h3>v1.0 Release <span class="badge legacy">Legacy</span></h3>
+                            <p>Initial release. Contains known bugs patched in v1.1.1.</p>
+                        </div>
+                        <i class="fas fa-chevron-right" style="color: #bdc3c7;"></i>
+                    </div>
+                </div>
             </div>
 
-            <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e9ecef;">
-                <h3 style="border: none;">Download the Application</h3>
-                <p style="margin-bottom: 2rem; color: #666;">
-                    Download the full application package here. The ZIP file contains the executable, bundled JRE, and setup instructions.
-                </p>
+
+            <div id="v111View" class="view-section">
+                <button class="back-btn" onclick="switchView('hubView')"><i class="fas fa-arrow-left"></i> Back to Versions</button>
                 
-                <a href="https://github.com/glzzjhn-byte/Glzz-Home/releases/download/v1.0/RONAOPOS_v1.0.zip" class="btn primary" style="display: inline-flex; align-items: center; gap: 10px; font-size: 1.1rem; padding: 15px 30px;">
-                    <i class="fas fa-download"></i> Download RONAOPOS v1.0
-                </a>
+                <div class="details-container">
+                    <h2>v1.1.1 <span class="badge latest" style="font-size: 0.9rem;">Latest Stable</span></h2>
+                    
+                    <h3 style="color: #2c3e50; margin-top: 1.5rem;"><i class="fas fa-tools" style="color: #3498db;"></i> What's New</h3>
+                    <ul class="details-list">
+                        <li><strong>Bug Fix:</strong> Resolved deletion bugs to ensure accurate record keeping and smoother database transactions.</li>
+                        <li>Performance optimizations for local environment setups.</li>
+                    </ul>
+
+                    <div class="alert-box">
+                        <strong><i class="fas fa-lock"></i> Important Admin Access:</strong><br><br>
+                        To access the admin panel securely upon first launch, please use <strong>JohnRonao</strong> as the master password.
+                    </div>
+
+                    <div class="download-grid">
+                        <div class="download-card" style="border-color: #3498db; box-shadow: 0 4px 10px rgba(52, 152, 219, 0.1);">
+                            <i class="fas fa-file-archive fa-3x" style="color: #3498db;"></i>
+                            <h4>Compressed ZIP</h4>
+                            <p>Includes Fat Jar executable, dependencies, and setup instructions.</p>
+                            <a href="https://github.com/glzzjhn-byte/Glzz-Home/releases/download/v1.1.1/RONAOPOS_v1.1.1.zip" class="btn-dl primary">
+                                <i class="fas fa-download"></i> Download ZIP
+                            </a>
+                        </div>
+                        <div class="download-card">
+                            <i class="fas fa-box-open fa-3x" style="color: #bdc3c7;"></i>
+                            <h4>MSI Installer</h4>
+                            <p>Standard Windows Setup Wizard.</p>
+                            <a href="#" class="btn-dl disabled">Unavailable</a>
+                        </div>
+                        <div class="download-card">
+                            <i class="fab fa-apple fa-3x" style="color: #bdc3c7;"></i>
+                            <h4>macOS DMG</h4>
+                            <p>Apple Disk Image package.</p>
+                            <a href="#" class="btn-dl disabled">Unavailable</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
+
+
+            <div id="v10View" class="view-section">
+                <button class="back-btn" onclick="switchView('hubView')"><i class="fas fa-arrow-left"></i> Back to Versions</button>
+                
+                <div class="details-container">
+                    <h2>v1.0 <span class="badge legacy" style="font-size: 0.9rem;">Legacy Release</span></h2>
+                    
+                    <h3 style="color: #2c3e50; margin-top: 1.5rem;"><i class="fas fa-info-circle" style="color: #95a5a6;"></i> Release Notes</h3>
+                    <ul class="details-list">
+                        <li>The initial public release of the RONAOPOS system.</li>
+                        <li><em>Note: This version contains known deletion bugs. We recommend v1.1.1.</em></li>
+                    </ul>
+
+                    <div class="alert-box">
+                        <strong><i class="fas fa-lock"></i> Important Admin Access:</strong><br><br>
+                        Password is <strong>JohnRonao</strong>.
+                    </div>
+
+                    <div class="download-grid">
+                        <div class="download-card">
+                            <i class="fas fa-file-archive fa-3x" style="color: #7f8c8d;"></i>
+                            <h4>Compressed ZIP</h4>
+                            <p>Includes initial Fat Jar executable and dependencies.</p>
+                            <a href="https://github.com/glzzjhn-byte/Glzz-Home/releases/download/v1.0/RONAOPOS_v1.0.zip" class="btn-dl secondary">
+                                <i class="fas fa-download"></i> Download ZIP
+                            </a>
+                        </div>
+                        <div class="download-card">
+                            <i class="fas fa-box-open fa-3x" style="color: #bdc3c7;"></i>
+                            <h4>MSI Installer</h4>
+                            <p>Standard Windows Setup Wizard.</p>
+                            <a href="#" class="btn-dl disabled">Unavailable</a>
+                        </div>
+                        <div class="download-card">
+                            <i class="fab fa-apple fa-3x" style="color: #bdc3c7;"></i>
+                            <h4>macOS DMG</h4>
+                            <p>Apple Disk Image package.</p>
+                            <a href="#" class="btn-dl disabled">Unavailable</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <footer>
+    <footer style="margin-top: 2rem;">
         <p>&copy; 2026 Bon. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        function switchView(viewId) {
+            // 1. Hide all sections
+            const sections = document.querySelectorAll('.view-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // 2. Show the targeted section
+            const activeSection = document.getElementById(viewId);
+            if (activeSection) {
+                activeSection.classList.add('active');
+                window.scrollTo(0, 0); // Scroll back to top when switching
+            }
+        }
+    </script>
 </body>
 </html>
