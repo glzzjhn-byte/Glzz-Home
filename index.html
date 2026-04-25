@@ -21,7 +21,9 @@
                     <li class="nav-item"><a class="nav-link text-dark" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link text-dark" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link text-dark" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="websites.html">Websites</a></li>
                     <li class="nav-item"><a class="nav-link text-dark" href="#apps">Apps & System</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#games">Games</a></li>
                     <li class="nav-item"><a class="nav-link text-dark" href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -66,67 +68,11 @@
     <section id="projects" class="py-5">
         <div class="container py-5">
             <h2 class="display-5 fw-bold text-dark text-center mb-5">Featured Projects</h2>
-            <div class="row g-4">
-                
-                <div class="col-md-4">
-                    <div class="card h-100 custom-card">
-                        <div class="project-image d-flex align-items-center justify-content-center text-secondary fs-5 fw-medium">
-                            VivaMaxCo
-                        </div>
-                        <div class="card-body p-4 d-flex flex-column">
-                            <h4 class="card-title fw-bold text-dark mb-3">VivaMaxCo (Trailer Site)</h4>
-                            <p class="card-text text-secondary mb-4">A static R18 trailer website created for demonstration purposes. Not affiliated with the official VivaMax.</p>
-                            <div class="mt-auto">
-                                <div class="d-flex flex-wrap gap-2 mb-3">
-                                    <span class="badge bg-light text-secondary rounded-pill px-3 py-2">HTML</span>
-                                    <span class="badge bg-light text-secondary rounded-pill px-3 py-2">CSS</span>
-                                    <span class="badge bg-light text-secondary rounded-pill px-3 py-2">JavaScript</span>
-                                </div>
-                                <button class="btn btn-link text-decoration-none p-0 fw-semibold text-primary" data-bs-toggle="modal" data-bs-target="#projectModal">View Project →</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card h-100 custom-card">
-                        <div class="project-image d-flex align-items-center justify-content-center text-secondary fs-5 fw-medium">
-                            Project 2
-                        </div>
-                        <div class="card-body p-4 d-flex flex-column">
-                            <h4 class="card-title fw-bold text-dark mb-3">Task Management App</h4>
-                            <p class="card-text text-secondary mb-4">Beautiful and intuitive todo app with drag & drop functionality.</p>
-                            <div class="mt-auto">
-                                <div class="d-flex flex-wrap gap-2 mb-3">
-                                    <span class="badge bg-light text-secondary rounded-pill px-3 py-2">HTML</span>
-                                    <span class="badge bg-light text-secondary rounded-pill px-3 py-2">CSS</span>
-                                    <span class="badge bg-light text-secondary rounded-pill px-3 py-2">JS</span>
-                                </div>
-                                <a href="#" class="btn btn-link text-decoration-none p-0 fw-semibold text-primary">View Project →</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card h-100 custom-card">
-                        <div class="project-image d-flex align-items-center justify-content-center text-secondary fs-5 fw-medium">
-                            Project 3
-                        </div>
-                        <div class="card-body p-4 d-flex flex-column">
-                            <h4 class="card-title fw-bold text-dark mb-3">Personal Finance Tracker</h4>
-                            <p class="card-text text-secondary mb-4">Track expenses and income with clean dashboard and charts.</p>
-                            <div class="mt-auto">
-                                <div class="d-flex flex-wrap gap-2 mb-3">
-                                    <span class="badge bg-light text-secondary rounded-pill px-3 py-2">HTML</span>
-                                    <span class="badge bg-light text-secondary rounded-pill px-3 py-2">CSS</span>
-                                    <span class="badge bg-light text-secondary rounded-pill px-3 py-2">JS</span>
-                                </div>
-                                <a href="#" class="btn btn-link text-decoration-none p-0 fw-semibold text-primary">View Project →</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="row g-4" id="featured-projects-container">
+                <!-- Projects will be dynamically inserted here by script.js -->
+            </div>
+            <div class="text-center mt-5">
+                <a href="websites.html" class="btn btn-outline-primary rounded-pill px-4 py-2 fw-semibold custom-btn-hover">View All Websites →</a>
             </div>
         </div>
     </section>
@@ -134,7 +80,7 @@
     <section id="apps" class="py-5 bg-white">
         <div class="container py-5">
             <h2 class="display-5 fw-bold text-dark text-center mb-5">Apps & System</h2>
-            <div class="row justify-content-center">
+            <div class="row justify-content-center mb-5">
                 <div class="col-md-4">
                     <div class="card h-100 custom-card">
                         <div class="project-image d-flex align-items-center justify-content-center fw-medium" style="background: #e9ecef; color: #2c3e50; font-size: 1.25rem;">
@@ -154,6 +100,77 @@
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="mt-5 pt-5 border-top">
+                <h2 class="display-5 fw-bold text-dark text-center mb-5">Machine Learning</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-4">
+                        <div class="card h-100 custom-card">
+                            <div class="project-image d-flex align-items-center justify-content-center fw-medium text-white" style="background: #6f42c1; font-size: 1.25rem;">
+                                RPS ML
+                            </div>
+                            <div class="card-body p-4 d-flex flex-column">
+                                <h4 class="card-title fw-bold text-dark mb-3">Rock Paper Scissors</h4>
+                                <p class="card-text text-secondary mb-4">An interactive Rock, Paper, Scissors game powered by a Machine Learning model that adapts to your playing style.</p>
+                                <div class="mt-auto">
+                                    <div class="d-flex flex-wrap gap-2 mb-3">
+                                        <span class="badge bg-light text-secondary rounded-pill px-3 py-2">Java</span>
+                                        <span class="badge bg-light text-secondary rounded-pill px-3 py-2">Machine Learning</span>
+                                    </div>
+                                    <a href="https://github.com/glzzjhn-byte/Glzz-Home/releases/download/Machine_Learning/RockPaperScissor-1.0-SNAPSHOT.jar" class="btn btn-link text-decoration-none p-0 fw-semibold text-primary"><i class="fas fa-download me-2"></i>Download .JAR</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="games" class="py-5">
+        <div class="container py-5">
+            <h2 class="display-5 fw-bold text-dark text-center mb-5">Games</h2>
+            <div class="row justify-content-center g-4">
+                
+                <div class="col-md-5">
+                    <div class="card h-100 custom-card">
+                        <div class="project-image d-flex align-items-center justify-content-center fw-medium text-white" style="background: #2c3e50; font-size: 1.25rem;">
+                            CYBERWARFARE SIMULATOR
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <h4 class="card-title fw-bold text-dark mb-3">CYBERWARFARE SIMULATOR</h4>
+                            <p class="card-text text-secondary mb-4">A hacking game built over 4 months utilizing a unique programming language. Originally a hobbyist project developed with the intention of monetization.</p>
+                            <div class="mt-auto">
+                                <div class="d-flex flex-wrap gap-2 mb-3">
+                                    <span class="badge bg-light text-secondary rounded-pill px-3 py-2">Roblox Studio</span>
+                                    <span class="badge bg-light text-secondary rounded-pill px-3 py-2">Luau</span>
+                                </div>
+                                <a href="https://www.roblox.com/games/106837349372359/CYBERWARFARE-SIMULATOR#!/about" target="_blank" class="btn btn-link text-decoration-none p-0 fw-semibold text-primary">Play on Roblox →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-5">
+                    <div class="card h-100 custom-card">
+                        <div class="project-image d-flex align-items-center justify-content-center fw-medium text-white" style="background: #34495e; font-size: 1.25rem;">
+                            My Own Worst Helper
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <h4 class="card-title fw-bold text-dark mb-3">My Own Worst Helper</h4>
+                            <p class="card-text text-secondary mb-4">An engaging Obby game where a clone of yourself acts as your guide throughout the obstacle courses—featuring a hidden, unexpected twist.</p>
+                            <div class="mt-auto">
+                                <div class="d-flex flex-wrap gap-2 mb-3">
+                                    <span class="badge bg-light text-secondary rounded-pill px-3 py-2">Roblox Studio</span>
+                                    <span class="badge bg-light text-secondary rounded-pill px-3 py-2">Level Design</span>
+                                </div>
+                                <a href="https://www.roblox.com/games/75575788362203/My-Own-Worst-Helper" target="_blank" class="btn btn-link text-decoration-none p-0 fw-semibold text-primary">Play on Roblox →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
