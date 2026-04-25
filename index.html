@@ -4,174 +4,195 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bon | Portfolio</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">Bon</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#apps">Apps & System</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <i class="fas fa-bars"></i>
+    <nav class="navbar navbar-expand-md navbar-light fixed-top custom-navbar">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3 text-dark" href="#">Bon</a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-3 fw-medium">
+                    <li class="nav-item"><a class="nav-link text-dark" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#apps">Apps & System</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#contact">Contact</a></li>
+                </ul>
             </div>
         </div>
     </nav>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Hi, I'm <span class="highlight">Bon</span></h1>
-            <p class="subtitle">Web Developer &amp; Creative Problem Solver</p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn primary">View My Work</a>
-                <a href="#contact" class="btn secondary">Get In Touch</a>
+    <section id="home" class="min-vh-100 d-flex align-items-center justify-content-center text-white text-center hero-gradient position-relative overflow-hidden" style="padding-top: 80px;">
+        <div class="container z-2">
+            <h1 class="display-3 fw-bold mb-3">Hi, I'm <span class="text-warning">Bon</span></h1>
+            <p class="fs-4 mb-4 text-white-50">Web Developer &amp; Creative Problem Solver</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#projects" class="btn btn-light text-primary rounded-pill px-4 py-2 fw-semibold shadow-sm custom-btn-hover">View My Work</a>
+                <a href="#contact" class="btn btn-outline-light rounded-pill px-4 py-2 fw-semibold custom-btn-hover">Get In Touch</a>
             </div>
         </div>
     </section>
 
-    <section id="about" class="about">
-        <div class="section-title">
-            <h2>About Me</h2>
-        </div>
-        <div class="about-content">
-            <div class="about-text">
-                <p>
-                    I'm a passionate web developer based in <strong>Naga, Bicol</strong>, Philippines. 
-                    I love turning ideas into clean, functional, and beautiful digital experiences.
-                </p>
-                <p>
-                    With a strong focus on modern web technologies, I build responsive and user-friendly websites.
-                </p>
-                <div class="skills">
-                    <h3>Skills</h3>
-                    <div class="skill-tags">
-                        <span class="tag">HTML5</span>
-                        <span class="tag">CSS3</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">UI/UX Design</span>
+    <section id="about" class="py-5 bg-white">
+        <div class="container text-center py-5">
+            <h2 class="display-5 fw-bold text-dark mb-5">About Me</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-start text-secondary fs-5">
+                    <p class="mb-4">
+                        I'm a passionate web developer based in <strong>Naga, Bicol</strong>, Philippines. 
+                        I love turning ideas into clean, functional, and beautiful digital experiences.
+                    </p>
+                    <p class="mb-5">
+                        With a strong focus on modern web technologies, I build responsive and user-friendly websites.
+                    </p>
+                    <h3 class="fw-bold text-dark mb-3">Skills</h3>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="badge bg-light text-dark border p-2 px-3 rounded-pill fs-6">HTML5</span>
+                        <span class="badge bg-light text-dark border p-2 px-3 rounded-pill fs-6">CSS3</span>
+                        <span class="badge bg-light text-dark border p-2 px-3 rounded-pill fs-6">JavaScript</span>
+                        <span class="badge bg-light text-dark border p-2 px-3 rounded-pill fs-6">UI/UX Design</span>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="projects">
-        <div class="section-title">
-            <h2>Featured Projects</h2>
-        </div>
-        <div class="projects-grid">
-            
-            <div class="project-card">
-                <div class="project-image">
-                    <div class="placeholder-img">VivaMaxCo</div>
-                </div>
-                <div class="project-info">
-                    <h3>VivaMaxCo (Trailer Site)</h3>
-                    <p>A static R18 trailer website created for demonstration purposes. Not affiliated with the official VivaMax.</p>
-                    <div class="project-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                    </div>
-                    <button onclick="showProjectModal()" class="project-link" style="background:none; border:none; padding:0; font: inherit; cursor: pointer;">View Project →</button>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image">
-                    <div class="placeholder-img">Project 2</div>
-                </div>
-                <div class="project-info">
-                    <h3>Task Management App</h3>
-                    <p>Beautiful and intuitive todo app with drag & drop functionality.</p>
-                    <div class="project-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JS</span>
-                    </div>
-                    <a href="#" class="project-link">View Project →</a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image">
-                    <div class="placeholder-img">Project 3</div>
-                </div>
-                <div class="project-info">
-                    <h3>Personal Finance Tracker</h3>
-                    <p>Track expenses and income with clean dashboard and charts.</p>
-                    <div class="project-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JS</span>
-                    </div>
-                    <a href="#" class="project-link">View Project →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="apps" class="projects">
-        <div class="section-title">
-            <h2>Apps & System</h2>
-        </div>
-        <div class="projects-grid">
-            
-            <div class="project-card">
-                <div class="project-image">
-                    <div class="placeholder-img" style="background: #e9ecef; color: #2c3e50;">RONAOPOS</div>
-                </div>
-                <div class="project-info">
-                    <h3>Point of Sale (POS) App</h3>
-                    <p>A comprehensive, user-friendly POS system designed to streamline inventory management, track daily sales, and optimize business retail operations efficiently.</p>
-                    <div class="project-tags">
-                        <span>Java</span>
-                        <span>Desktop App</span>
-                        <span>Database</span>
+    <section id="projects" class="py-5">
+        <div class="container py-5">
+            <h2 class="display-5 fw-bold text-dark text-center mb-5">Featured Projects</h2>
+            <div class="row g-4">
+                
+                <div class="col-md-4">
+                    <div class="card h-100 custom-card">
+                        <div class="project-image d-flex align-items-center justify-content-center text-secondary fs-5 fw-medium">
+                            VivaMaxCo
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <h4 class="card-title fw-bold text-dark mb-3">VivaMaxCo (Trailer Site)</h4>
+                            <p class="card-text text-secondary mb-4">A static R18 trailer website created for demonstration purposes. Not affiliated with the official VivaMax.</p>
+                            <div class="mt-auto">
+                                <div class="d-flex flex-wrap gap-2 mb-3">
+                                    <span class="badge bg-light text-secondary rounded-pill px-3 py-2">HTML</span>
+                                    <span class="badge bg-light text-secondary rounded-pill px-3 py-2">CSS</span>
+                                    <span class="badge bg-light text-secondary rounded-pill px-3 py-2">JavaScript</span>
+                                </div>
+                                <button class="btn btn-link text-decoration-none p-0 fw-semibold text-primary" data-bs-toggle="modal" data-bs-target="#projectModal">View Project →</button>
+                            </div>
+                        </div>
                     </div>
-                    <a href="ronaopos.html" class="project-link">View Details & Download →</a>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 custom-card">
+                        <div class="project-image d-flex align-items-center justify-content-center text-secondary fs-5 fw-medium">
+                            Project 2
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <h4 class="card-title fw-bold text-dark mb-3">Task Management App</h4>
+                            <p class="card-text text-secondary mb-4">Beautiful and intuitive todo app with drag & drop functionality.</p>
+                            <div class="mt-auto">
+                                <div class="d-flex flex-wrap gap-2 mb-3">
+                                    <span class="badge bg-light text-secondary rounded-pill px-3 py-2">HTML</span>
+                                    <span class="badge bg-light text-secondary rounded-pill px-3 py-2">CSS</span>
+                                    <span class="badge bg-light text-secondary rounded-pill px-3 py-2">JS</span>
+                                </div>
+                                <a href="#" class="btn btn-link text-decoration-none p-0 fw-semibold text-primary">View Project →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 custom-card">
+                        <div class="project-image d-flex align-items-center justify-content-center text-secondary fs-5 fw-medium">
+                            Project 3
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <h4 class="card-title fw-bold text-dark mb-3">Personal Finance Tracker</h4>
+                            <p class="card-text text-secondary mb-4">Track expenses and income with clean dashboard and charts.</p>
+                            <div class="mt-auto">
+                                <div class="d-flex flex-wrap gap-2 mb-3">
+                                    <span class="badge bg-light text-secondary rounded-pill px-3 py-2">HTML</span>
+                                    <span class="badge bg-light text-secondary rounded-pill px-3 py-2">CSS</span>
+                                    <span class="badge bg-light text-secondary rounded-pill px-3 py-2">JS</span>
+                                </div>
+                                <a href="#" class="btn btn-link text-decoration-none p-0 fw-semibold text-primary">View Project →</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <div id="projectModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal()">&times;</span>
-            <h2>VivaMaxCo (Trailer Site)</h2>
-            <p><strong>Important Disclaimer:</strong></p>
-            <p>This is a <strong>static demonstration trailer website</strong> created for portfolio purposes only.</p>
-            <p>It contains adult (R18) content and is intended strictly for showcasing web development skills. <strong>It is not a commercial store and is NOT affiliated with the official VivaMax brand.</strong></p>
-            <br>
-            
-            <div class="modal-buttons">
-                <button onclick="closeModal()" class="btn secondary" style="color: #333; border-color: #ccc;">Cancel</button>
-                <button onclick="goToProject()" class="btn primary">Proceed to Website</button>
+    <section id="apps" class="py-5 bg-white">
+        <div class="container py-5">
+            <h2 class="display-5 fw-bold text-dark text-center mb-5">Apps & System</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <div class="card h-100 custom-card">
+                        <div class="project-image d-flex align-items-center justify-content-center fw-medium" style="background: #e9ecef; color: #2c3e50; font-size: 1.25rem;">
+                            RONAOPOS
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <h4 class="card-title fw-bold text-dark mb-3">Point of Sale (POS) App</h4>
+                            <p class="card-text text-secondary mb-4">A comprehensive, user-friendly POS system designed to streamline inventory management, track daily sales, and optimize business retail operations efficiently.</p>
+                            <div class="mt-auto">
+                                <div class="d-flex flex-wrap gap-2 mb-3">
+                                    <span class="badge bg-light text-secondary rounded-pill px-3 py-2">Java</span>
+                                    <span class="badge bg-light text-secondary rounded-pill px-3 py-2">Desktop App</span>
+                                    <span class="badge bg-light text-secondary rounded-pill px-3 py-2">Database</span>
+                                </div>
+                                <a href="ronaopos.html" class="btn btn-link text-decoration-none p-0 fw-semibold text-primary">View Details & Download →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg" style="border-radius: 16px;">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center px-4 pb-4">
+                    <h3 class="fw-bold mb-3" id="projectModalLabel">VivaMaxCo (Trailer Site)</h3>
+                    <p class="text-danger fw-semibold">Important Disclaimer:</p>
+                    <p class="text-secondary">This is a <strong>static demonstration trailer website</strong> created for portfolio purposes only.</p>
+                    <p class="text-secondary mb-4">It contains adult (R18) content and is intended strictly for showcasing web development skills. <strong>It is not a commercial store and is NOT affiliated with the official VivaMax brand.</strong></p>
+                    
+                    <div class="d-flex justify-content-center gap-3">
+                        <button type="button" class="btn btn-outline-secondary rounded-pill px-4" data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" onclick="goToProject()" class="btn btn-primary rounded-pill px-4">Proceed to Website</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <section id="contact" class="contact">
-        <div class="section-title">
-            <h2 style="color: white;">Get In Touch</h2>
-        </div>
-        <div class="contact-content">
-            <p>I'm currently open for new opportunities and exciting projects.</p>
-            <a href="mailto:your.email@example.com" class="btn primary" style="background: white; color: #2c3e50;">Email Me</a>
+    <section id="contact" class="py-5 bg-dark text-white text-center">
+        <div class="container py-5">
+            <h2 class="display-5 fw-bold mb-4">Get In Touch</h2>
+            <p class="fs-4 text-white-50 mb-4">I'm currently open for new opportunities and exciting projects.</p>
+            <a href="mailto:your.email@example.com" class="btn btn-light text-dark rounded-pill px-4 py-2 fw-semibold fs-5 custom-btn-hover">Email Me</a>
         </div>
     </section>
 
-    <footer>
+    <footer class="bg-dark text-white-50 text-center py-4 border-top border-secondary">
         <p>&copy; 2026 Bon. All Rights Reserved.</p>
     </footer>
 
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
