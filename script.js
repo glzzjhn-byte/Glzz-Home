@@ -31,7 +31,7 @@ const allProjectsData = [
         imageText: 'RONAOPOS',
         title: 'Point of Sale (POS) App',
         description: 'A comprehensive, user-friendly POS system designed to streamline inventory management, track daily sales, and optimize business retail operations efficiently.',
-        tags: ['Java', 'Desktop App', 'Database'],
+        tags: ['Java', 'Desktop App', 'Database', 'Server-Client'],
         actionHtml: '<a href="ronaopos.html" class="btn btn-link text-decoration-none p-0 fw-semibold text-primary">View Details & Download →</a>'
     },
     {
@@ -40,6 +40,13 @@ const allProjectsData = [
         description: 'An interactive Rock, Paper, Scissors game powered by a Machine Learning model that adapts to your playing style.',
         tags: ['Java', 'Machine Learning'],
         actionHtml: '<a href="https://github.com/glzzjhn-byte/Glzz-Home/releases/download/Machine_Learning/RockPaperScissor-1.0-SNAPSHOT.jar" class="btn btn-link text-decoration-none p-0 fw-semibold text-primary"><i class="fas fa-download me-2"></i>Download .JAR</a>'
+    },
+    {
+        imageText: 'SimpleShield',
+        title: 'SimpleShield Easy Anti-Cheat',
+        description: 'A highly accessible, drop-in anti-cheat plugin designed to secure interactive environments. It easily installs to provide instant, robust protection against common exploits and tampering.',
+        tags: ['Security', 'Anti-Cheat', 'Plugin'],
+        actionHtml: '<a href="https://create.roblox.com/store/asset/100468824967185/SimpleShield-Easy-AntiCheat" target="_blank" class="btn btn-link text-decoration-none p-0 fw-semibold text-primary"><i class="fas fa-shield-alt me-2"></i>View Plugin →</a>'
     },
     {
         imageText: 'CYBERWARFARE SIMULATOR',
