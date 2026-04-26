@@ -1,9 +1,8 @@
-// Apply dark mode instantly to prevent white flash on load
+// Dark mode
 if (localStorage.getItem('darkMode') === 'enabled') {
     document.body.classList.add('dark-mode');
 }
 
-// Simple scroll effect for navbar
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 100) {
@@ -88,7 +87,7 @@ function renderRandomProjects() {
     const container = document.getElementById('featured-projects-container');
     if (!container) return; // Exit if container is not found on this page
 
-    // Shuffle the array (Fisher-Yates algorithm)
+    // Shuffle the array 
     let shuffled = [...allProjectsData];
     for (let i = shuffled.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -128,7 +127,7 @@ function renderRandomProjects() {
     container.innerHTML = html;
 }
 
-// Function to load dynamic GitHub Summary Cards
+// function that load dynamic GitHub Summary Cards
 function loadGitHubSummary() {
     const container = document.getElementById('github-summary-cards');
     const loader = document.getElementById('gh-loading');
@@ -145,7 +144,7 @@ function loadGitHubSummary() {
     let html = '';
 
     cards.forEach((card, index) => {
-        const delay = index * 0.15; // Staggered animation delay
+        const delay = index * 0.15; 
         html += `
             <div class="col-lg-4 col-md-6" style="animation: fadeIn 0.5s ease-out ${delay}s both;">
                 <div class="card custom-card border-0 shadow-sm bg-white h-100 p-2 d-flex align-items-center justify-content-center github-stat-card">
@@ -155,14 +154,13 @@ function loadGitHubSummary() {
         `;
     });
 
-    // Small delay to let the nice syncing spinner show momentarily
     setTimeout(() => {
         if (loader) loader.style.display = 'none';
         container.innerHTML = html;
     }, 600);
 }
 
-// Initialize Dark Mode Toggle functionality
+// Initialize Dark Mode 
 function initDarkMode() {
     const darkModeToggle = document.getElementById('darkModeToggle');
     if (!darkModeToggle) return;
@@ -189,8 +187,6 @@ function initDarkMode() {
         }
     });
 }
-
-// Trigger the randomizer when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
     renderRandomProjects();
     loadGitHubSummary();
