@@ -12,7 +12,12 @@
 <body>
     <nav class="navbar navbar-expand-md navbar-light fixed-top custom-navbar">
         <div class="container">
-            <a class="navbar-brand fw-bold fs-3 text-dark" href="#">Bon</a>
+            <div class="d-flex align-items-center">
+                <button class="btn btn-link text-dark text-decoration-none p-0 me-3" id="darkModeToggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon fs-5"></i>
+                </button>
+                <a class="navbar-brand fw-bold fs-3 text-dark mb-0" href="#">Bon</a>
+            </div>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -22,6 +27,7 @@
                     <li class="nav-item"><a class="nav-link text-dark" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link text-dark" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link text-dark" href="websites.html">Websites</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="electronics.html">Electronics</a></li>
                     <li class="nav-item"><a class="nav-link text-dark" href="#apps">Apps & System</a></li>
                     <li class="nav-item"><a class="nav-link text-dark" href="#games">Games</a></li>
                     <li class="nav-item"><a class="nav-link text-dark" href="#contact">Contact</a></li>
@@ -55,15 +61,30 @@
                     <p class="mb-5">
                         Beyond standard development, I specialize in Computational Security, having engineered custom Anti-Cheat and Anti-Tamper systems for large-scale interactive environments. Whether I am training neural networks or hardening a system's defenses against exploits, I focus on creating digital experiences that are as secure as they are immersive.
                     </p>
-                    <h3 class="fw-bold text-dark mb-3">Skills</h3>
-                    <div class="d-flex flex-wrap gap-2">
-                        <span class="badge bg-light text-dark border p-2 px-3 rounded-pill fs-6">Full-Stack Development</span>
-                        <span class="badge bg-light text-dark border p-2 px-3 rounded-pill fs-6">Mobile App Architecture</span>
-                        <span class="badge bg-light text-dark border p-2 px-3 rounded-pill fs-6">Machine Learning</span>
-                        <span class="badge bg-light text-dark border p-2 px-3 rounded-pill fs-6">Deep Learning</span>
-                        <span class="badge bg-light text-dark border p-2 px-3 rounded-pill fs-6">Server-Client Architecture</span>
-                        <span class="badge bg-light text-dark border p-2 px-3 rounded-pill fs-6">Computational Security</span>
-                        <span class="badge bg-light text-dark border p-2 px-3 rounded-pill fs-6">Anti-Cheat Systems</span>
+
+                    <div class="mb-5 text-center">
+                        <h3 class="fw-bold text-dark mb-4">Core Skills</h3>
+                        <div class="d-flex flex-wrap gap-2 justify-content-center">
+                            <span class="badge bg-light text-dark border p-2 px-3 rounded-pill fs-6 shadow-sm">Full-Stack Development</span>
+                            <span class="badge bg-light text-dark border p-2 px-3 rounded-pill fs-6 shadow-sm">Mobile App Architecture</span>
+                            <span class="badge bg-light text-dark border p-2 px-3 rounded-pill fs-6 shadow-sm">Machine Learning</span>
+                            <span class="badge bg-light text-dark border p-2 px-3 rounded-pill fs-6 shadow-sm">Deep Learning</span>
+                            <span class="badge bg-light text-dark border p-2 px-3 rounded-pill fs-6 shadow-sm">Server-Client Architecture</span>
+                            <span class="badge bg-light text-dark border p-2 px-3 rounded-pill fs-6 shadow-sm">Computational Security</span>
+                            <span class="badge bg-light text-dark border p-2 px-3 rounded-pill fs-6 shadow-sm">Anti-Cheat Systems</span>
+                        </div>
+                    </div>
+
+                    <!-- Dynamic GitHub Stats -->
+                    <div class="mt-5 pt-4 border-top">
+                        <h3 class="fw-bold text-dark mb-4 text-center">GitHub Activity Summary</h3>
+                        <div class="row g-4 justify-content-center" id="github-summary-cards">
+                            <!-- Loader before JS populates -->
+                            <div class="col-12 text-center text-secondary py-5" id="gh-loading">
+                                <div class="spinner-border text-primary mb-3" role="status"></div>
+                                <p class="fw-medium">Syncing live statistics from GitHub...</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
