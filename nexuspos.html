@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RONAOPOS | Releases & Downloads</title>
-    <!-- Bootstrap 5 CSS -->
+    <title>NexusPOS | Releases & Downloads</title>
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
-        /* Views */
+        /* View sections */
         .view-section {
-            display: none; /* Hidden by default */
+            display: none; /* Hide view */
             animation: fadeIn 0.3s ease-in-out;
         }
         .view-section.active {
-            display: block; 
+            display: block; /* Show view */
         }
 
         @keyframes fadeIn {
@@ -24,7 +24,6 @@
         }
 
         .version-item {
-            background: #fff;
             transition: all 0.2s ease;
             cursor: pointer;
         }
@@ -36,11 +35,22 @@
     </style>
 </head>
 <body>
+    <script>if(localStorage.getItem('darkMode') === 'enabled') document.body.classList.add('dark-mode');</script>
     <nav class="navbar navbar-expand-md navbar-light fixed-top custom-navbar">
         <div class="container">
-            <a class="navbar-brand fw-bold fs-3 text-dark" href="index.html">Bon</a>
-            <div class="d-flex ms-auto">
-                <a class="nav-link fw-medium text-dark" href="index.html">← Back to Portfolio</a>
+            <div class="d-flex align-items-center">
+                <button class="btn btn-link text-dark text-decoration-none p-0 me-3" id="darkModeToggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon fs-5"></i>
+                </button>
+                <a class="navbar-brand fw-bold fs-3 text-dark mb-0" href="index.html">Bon</a>
+            </div>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-3 fw-medium">
+                    <li class="nav-item"><a class="nav-link text-dark" href="index.html">← Back to Portfolio</a></li>
+                </ul>
             </div>
         </div>
     </nav>
@@ -50,12 +60,12 @@
             
             <div id="hubView" class="view-section active">
                 <div class="text-center mb-5">
-                    <h2 class="display-5 fw-bold text-dark">RONAOPOS Downloads</h2>
+                    <h2 class="display-5 fw-bold text-dark">NexusPOS Downloads</h2>
                     <p class="text-secondary fs-5">Select a release version below to view details and download.</p>
                 </div>
 
                 <div class="d-flex flex-column gap-3">
-                    <div class="version-item border rounded-3 p-4 d-flex justify-content-between align-items-center" onclick="switchView('v111View')">
+                    <div class="version-item bg-white border rounded-3 p-4 d-flex justify-content-between align-items-center" onclick="switchView('v111View')">
                         <div>
                             <h3 class="fw-bold mb-2 text-dark d-flex align-items-center gap-2">
                                 v1.1.1 Update <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill fs-6 px-3">Latest Stable</span>
@@ -65,7 +75,7 @@
                         <i class="fas fa-chevron-right" style="color: #bdc3c7;"></i>
                     </div>
 
-                    <div class="version-item border rounded-3 p-4 d-flex justify-content-between align-items-center" onclick="switchView('v10View')">
+                    <div class="version-item bg-white border rounded-3 p-4 d-flex justify-content-between align-items-center" onclick="switchView('v10View')">
                         <div>
                             <h3 class="fw-bold mb-2 text-dark d-flex align-items-center gap-2">
                                 v1.0 Release <span class="badge bg-light text-secondary border rounded-pill fs-6 px-3">Legacy</span>
@@ -83,7 +93,7 @@
                 
                 <div class="card border border-light-subtle rounded-4 p-4 p-md-5 bg-light shadow-sm custom-card">
                     <div class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-4">
-                        <h2 class="fw-bold mb-0">v1.1.1</h2>
+                        <h2 class="fw-bold mb-0 text-dark">v1.1.1</h2>
                         <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-3 py-2">Latest Stable</span>
                     </div>
                     
@@ -93,18 +103,13 @@
                         <li>Performance optimizations for local environment setups.</li>
                     </ul>
 
-                    <div class="alert alert-warning border-start border-5 border-warning mb-4" role="alert">
-                        <strong><i class="fas fa-lock me-2"></i> Important Admin Access:</strong><br><br>
-                        To access the admin panel securely upon first launch, please use <strong>JohnRonao</strong> as the master password.
-                    </div>
-
                     <div class="row g-4 mt-2 pt-4 border-top">
                         <div class="col-md-4">
                             <div class="card h-100 text-center p-4 border-primary border-opacity-50 shadow-sm rounded-4">
                                 <div class="mb-3"><i class="fas fa-file-archive fa-3x text-primary"></i></div>
                                 <h4 class="h5 fw-bold">Compressed ZIP</h4>
                                 <p class="text-secondary small mb-4 flex-grow-1">Includes Fat Jar executable, dependencies, and setup instructions.</p>
-                                <a href="https://github.com/glzzjhn-byte/Glzz-Home/releases/download/v1.1.1/RONAOPOS_v1.1.1.zip" class="btn btn-primary w-100">
+                                <a href="https://github.com/glzzjhn-byte/Glzz-Home/releases/download/v1.1.1/NexusPOS_v1.1.1.zip" class="btn btn-primary w-100">
                                     <i class="fas fa-download me-2"></i> Download ZIP
                                 </a>
                             </div>
@@ -135,20 +140,15 @@
                 
                 <div class="card border border-light-subtle rounded-4 p-4 p-md-5 bg-light shadow-sm custom-card">
                     <div class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-4">
-                        <h2 class="fw-bold mb-0">v1.0</h2>
+                        <h2 class="fw-bold mb-0 text-dark">v1.0</h2>
                         <span class="badge bg-light text-secondary border rounded-pill px-3 py-2">Legacy Release</span>
                     </div>
                     
                     <h3 class="h5 fw-bold text-dark mb-3"><i class="fas fa-info-circle text-secondary me-2"></i> Release Notes</h3>
                     <ul class="text-secondary lh-lg mb-4">
-                        <li>The initial public release of the RONAOPOS system.</li>
+                        <li>The initial public release of the NexusPOS system.</li>
                         <li><em>Note: This version contains known deletion bugs. We recommend v1.1.1.</em></li>
                     </ul>
-
-                    <div class="alert alert-warning border-start border-5 border-warning mb-4" role="alert">
-                        <strong><i class="fas fa-lock me-2"></i> Important Admin Access:</strong><br><br>
-                        Password is <strong>JohnRonao</strong>.
-                    </div>
 
                     <div class="row g-4 mt-2 pt-4 border-top">
                         <div class="col-md-4">
@@ -156,7 +156,7 @@
                                 <div class="mb-3"><i class="fas fa-file-archive fa-3x text-secondary"></i></div>
                                 <h4 class="h5 fw-bold">Compressed ZIP</h4>
                                 <p class="text-secondary small mb-4 flex-grow-1">Includes initial Fat Jar executable and dependencies.</p>
-                                <a href="https://github.com/glzzjhn-byte/Glzz-Home/releases/download/v1.0/RONAOPOS_v1.0.zip" class="btn btn-secondary w-100">
+                                <a href="https://github.com/glzzjhn-byte/Glzz-Home/releases/download/v1.0/NexusPOS_v1.0.zip" class="btn btn-secondary w-100">
                                     <i class="fas fa-download me-2"></i> Download ZIP
                                 </a>
                             </div>
@@ -188,19 +188,22 @@
         <p>&copy; 2026 Bon. All Rights Reserved.</p>
     </footer>
 
-    <!-- Bootstrap 5 JS Bundle -->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
     <script>
         function switchView(viewId) {
+            // Hide all views
             const sections = document.querySelectorAll('.view-section');
             sections.forEach(section => {
                 section.classList.remove('active');
             });
 
+            // Show target view
             const activeSection = document.getElementById(viewId);
             if (activeSection) {
                 activeSection.classList.add('active');
-                window.scrollTo(0, 0);
+                window.scrollTo(0, 0); // Scroll top
             }
         }
     </script>
