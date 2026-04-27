@@ -16,14 +16,14 @@ function goToProject() {
 // Projects data
 const allProjectsData = [
     {
-        imageText: 'VivaMaxCo',
+        imageText: '<img src="Images/Lady_Icon.png" alt="VivaMaxCo" class="w-100 h-100" style="object-fit: cover;" onerror="this.outerHTML=\'VivaMaxCo\'">',
         title: 'VivaMaxCo (Trailer Site)',
         description: 'A static R18 trailer website created for demonstration purposes. Not affiliated with the official VivaMax.',
         tags: ['HTML', 'Custom CSS', 'Vanilla JS'],
         actionHtml: '<button class="btn btn-link text-decoration-none p-0 fw-semibold text-primary" data-bs-toggle="modal" data-bs-target="#projectModal">View Project →</button>'
     },
     {
-        imageText: 'EMS',
+        imageText: '<img src="Images/Asclepius.png" alt="EMS" class="w-100 h-100" style="object-fit: cover;" onerror="this.outerHTML=\'EMS\'">',
         title: 'Electronic Medical Record System',
         description: 'A static frontend dashboard for managing medical records. Built cleanly using Bootstrap.',
         tags: ['HTML', 'CSS', 'Bootstrap'],
@@ -104,7 +104,7 @@ function renderRandomProjects() {
         html += `
             <div class="col-md-4">
                 <div class="card h-100 custom-card">
-                    <div class="project-image d-flex align-items-center justify-content-center text-secondary fs-5 fw-medium">
+                    <div class="project-image d-flex align-items-center justify-content-center text-secondary fs-5 fw-medium overflow-hidden">
                         ${project.imageText}
                     </div>
                     <div class="card-body p-4 d-flex flex-column">
