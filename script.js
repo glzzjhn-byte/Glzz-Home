@@ -16,6 +16,13 @@ function goToProject() {
 // Projects data
 const allProjectsData = [
     {
+        imageText: 'Library System',
+        title: 'Library Management System',
+        description: 'A modern dynamic web application designed for efficient library resource management.',
+        tags: ['React JS', 'Tailwind CSS'],
+        actionHtml: '<a href="https://nexus-status.42web.io/" target="_blank" class="btn btn-link text-decoration-none p-0 fw-semibold text-primary">View Website →</a>'
+    },
+    {
         imageText: '<img src="Images/Lady_Icon.png" alt="VivaMaxCo" class="w-100 h-100" style="object-fit: cover;" onerror="this.outerHTML=\'VivaMaxCo\'">',
         title: 'VivaMaxCo (Trailer Site)',
         description: 'A static R18 trailer website created for demonstration purposes. Not affiliated with the official VivaMax.',
