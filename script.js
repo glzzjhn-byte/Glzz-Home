@@ -1,4 +1,4 @@
-// Navbar scroll effect
+// Navbar scroll 
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (navbar) {
@@ -16,7 +16,7 @@ function goToProject() {
 // Projects data
 const allProjectsData = [
     {
-        imageText: 'Library System',
+        imageText: '<img src="Images/LibraryImage.png" alt="Library Management System" class="w-100 h-100" style="object-fit: cover;" onerror="this.outerHTML=\'Library Management System\'">',
         title: 'Library Management System',
         description: 'A modern dynamic web application designed for efficient library resource management.',
         tags: ['React JS', 'Tailwind CSS'],
@@ -30,7 +30,7 @@ const allProjectsData = [
         actionHtml: '<button class="btn btn-link text-decoration-none p-0 fw-semibold text-primary" data-bs-toggle="modal" data-bs-target="#projectModal">View Project →</button>'
     },
     {
-        imageText: '<img src="Images/Asclepius.png" alt="EMS" class="w-100 h-100" style="object-fit: cover;" onerror="this.outerHTML=\'EMS\'">',
+        imageText: '<img src="Images/Asclepius.png" alt="EMR" class="w-100 h-100" style="object-fit: cover;" onerror="this.outerHTML=\'EMR\'">',
         title: 'Electronic Medical Record System',
         description: 'A static frontend dashboard for managing medical records. Built cleanly using Bootstrap.',
         tags: ['HTML', 'CSS', 'Bootstrap'],
@@ -44,14 +44,14 @@ const allProjectsData = [
         actionHtml: '<a href="nexuspos.html" class="btn btn-link text-decoration-none p-0 fw-semibold text-primary">View Details & Download →</a>'
     },
     {
-        imageText: 'RPS ML',
+        imageText: '<img src="Images/AIRockPaper.png" alt="AI Rock Paper Scissors" class="w-100 h-100" style="object-fit: cover;" onerror="this.outerHTML=\'AI-Powered Rock Paper Scissors\'">',
         title: 'Rock Paper Scissors (ML)',
         description: 'An interactive Rock, Paper, Scissors game powered by a Machine Learning model that adapts to your playing style.',
         tags: ['Java', 'Machine Learning'],
         actionHtml: '<a href="https://github.com/glzzjhn-byte/Glzz-Home/releases/download/Machine_Learning/RockPaperScissor-1.0-SNAPSHOT.jar" class="btn btn-link text-decoration-none p-0 fw-semibold text-primary"><i class="fas fa-download me-2"></i>Download .JAR</a>'
     },
     {
-        imageText: 'SimpleShield',
+        imageText: '<img src="Images/SHIELD-removebg-preview.png" alt="SimpleShield" class="w-100 h-100" style="object-fit: cover;" onerror="this.outerHTML=\'SimpleShield Easy Anti-Cheat\'">',
         title: 'SimpleShield Easy Anti-Cheat',
         description: 'A highly accessible, drop-in anti-cheat plugin designed to secure interactive environments. It easily installs to provide instant, robust protection against common exploits and tampering.',
         tags: ['Security', 'Anti-Cheat', 'Plugin'],
@@ -72,14 +72,14 @@ const allProjectsData = [
         actionHtml: '<a href="https://www.roblox.com/games/75575788362203/My-Own-Worst-Helper" target="_blank" class="btn btn-link text-decoration-none p-0 fw-semibold text-primary">Play on Roblox →</a>'
     },
     {
-        imageText: 'PCB Shaker',
+        imageText: '<img src="Images/PCBEtchDesign.png" alt="PCB Shaker Prototype" class="w-100 h-100" style="object-fit: cover;" onerror="this.outerHTML=\'PCB Shaker\'">',
         title: 'PCB Etching Shaker',
         description: 'A prototype design for an automated PCB etching shaker. Designed and simulated using Proteus.',
         tags: ['Proteus', 'PCB Design', 'Hardware'],
         actionHtml: '<a href="https://github.com/glzzjhn-byte/Glzz-Home/releases/download/ELECTRIC/PCBETCHINGSHAKERFINALDESIGN.pdsprj" class="btn btn-link text-decoration-none p-0 fw-semibold text-primary"><i class="fas fa-download me-2"></i>Download .pdsprj</a>'
     },
     {
-        imageText: 'Clap Switch',
+        imageText: '<img src="Images/ARduino Smart clap switch.jpg" alt="Arduino Clap Switch" class="w-100 h-100" style="object-fit: cover;" onerror="this.outerHTML=\'Clap Switch\'">',
         title: 'Arduino Clap Switch',
         description: 'An embedded system prototype for a clap-activated switch using Arduino. Designed and simulated in Proteus.',
         tags: ['Arduino', 'Proteus', 'Embedded System'],
