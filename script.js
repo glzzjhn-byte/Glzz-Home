@@ -1,4 +1,4 @@
-// Navbar scroll 
+// Navbar scroll effect
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (navbar) {
@@ -84,6 +84,13 @@ const allProjectsData = [
         description: 'An embedded system prototype for a clap-activated switch using Arduino. Designed and simulated in Proteus.',
         tags: ['Arduino', 'Proteus', 'Embedded System'],
         actionHtml: '<a href="https://github.com/glzzjhn-byte/Glzz-Home/releases/download/ELECTRIC/Arduino.pdsprj" class="btn btn-link text-decoration-none p-0 fw-semibold text-primary"><i class="fas fa-download me-2"></i>Download .pdsprj</a>'
+    },
+    {
+        imageText: '<img src="Images/Chess.png" alt="Static Web Chess AI" class="w-100 h-100" style="object-fit: cover;" onerror="this.outerHTML=\'Static Web Chess AI\'">',
+        title: 'Static Web Chess AI',
+        description: 'An interactive chess environment designed to visualize Machine Learning and Deep Learning mechanics. Features live simulations of neural network training, alongside modes to play locally or challenge the Stockfish engine.',
+        tags: ['Machine Learning', 'Deep Learning', 'Static Web'],
+        actionHtml: '<a href="https://glzzjhn-byte.github.io/Web-Chess-AI/" target="_blank" class="btn btn-link text-decoration-none p-0 fw-semibold text-primary">Play Game →</a>'
     }
 ];
 
