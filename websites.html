@@ -1,17 +1,19 @@
+<!-- Copyright (c) GlzzJohn -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bon | Websites</title>
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <script>if(localStorage.getItem('darkMode') === 'enabled') document.body.classList.add('dark-mode');</script>
-    <nav class="navbar navbar-expand-md navbar-light fixed-top custom-navbar">
+    <div id="announcement-banner" class="bg-dark text-white d-flex align-items-center justify-content-center position-fixed w-100 shadow-sm" style="top: 0; height: 40px; z-index: 1040; font-size: 0.85rem; overflow: hidden; display: none;">
+    </div>
+    <nav class="navbar navbar-expand-md navbar-light fixed-top custom-navbar" style="top: 40px;">
         <div class="container">
             <div class="d-flex align-items-center">
                 <button class="btn btn-link text-dark text-decoration-none p-0 me-3" id="darkModeToggle" aria-label="Toggle Dark Mode">
@@ -30,7 +32,7 @@
         </div>
     </nav>
 
-    <section class="min-vh-100 py-5 bg-white" style="margin-top: 80px;">
+    <section class="min-vh-100 py-5 bg-white" style="margin-top: 120px;">
         <div class="container py-5">
             <h1 class="display-4 fw-bold text-dark text-center mb-5">Web Projects</h1>
 
@@ -153,7 +155,6 @@
         <p>&copy; 2026 Bon. All Rights Reserved.</p>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
