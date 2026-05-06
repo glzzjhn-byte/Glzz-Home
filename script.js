@@ -1,4 +1,4 @@
-// Navbar scroll effect
+// Copyright (c) GlzzJohn
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (navbar) {
@@ -13,7 +13,6 @@ function goToProject() {
     window.open('https://shiny-nougat-2dee85.netlify.app', '_self');
 }
 
-// Projects data
 const allProjectsData = [
     {
         imageText: '<img src="Images/LibraryImage.png" alt="Library Management System" class="w-100 h-100" style="object-fit: cover;" onerror="this.outerHTML=\'Library Management System\'">',
@@ -58,6 +57,13 @@ const allProjectsData = [
         actionHtml: '<a href="https://create.roblox.com/store/asset/100468824967185/SimpleShield-Easy-AntiCheat" target="_blank" class="btn btn-link text-decoration-none p-0 fw-semibold text-primary"><i class="fas fa-shield-alt me-2"></i>View Plugin →</a>'
     },
     {
+        imageText: '<div class="w-100 h-100 d-flex align-items-center justify-content-center text-white fw-bold" style="background: #e74c3c;">CyberShield Premium</div>',
+        title: 'CyberShield Anti-Cheat Premium',
+        description: 'An advanced, premium anti-cheat featuring an external API, webhook logging, ban capability, remote event abuse detection, and enhanced movement checks.',
+        tags: ['Security', 'Premium ($10.99)', 'API', 'Luau'],
+        actionHtml: '<a href="https://create.roblox.com/store/asset/124778777859404/CyberShield-AntiCheat-Premium-AntiExploit" target="_blank" class="btn btn-link text-decoration-none p-0 fw-semibold text-primary"><i class="fas fa-shield-alt me-2"></i>View Plugin →</a>'
+    },
+    {
         imageText: 'CYBERWARFARE SIMULATOR',
         title: 'CYBERWARFARE SIMULATOR',
         description: 'A hacking game built over 4 months utilizing a unique programming language. Originally a hobbyist project developed with the intention of monetization.',
@@ -94,19 +100,16 @@ const allProjectsData = [
     }
 ];
 
-// Render random projects
 function renderRandomProjects() {
     const container = document.getElementById('featured-projects-container');
-    if (!container) return; // Null check
+    if (!container) return;
 
-    // Shuffle projects
     let shuffled = [...allProjectsData];
     for (let i = shuffled.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
     }
     
-    // Pick top 3
     const selectedProjects = shuffled.slice(0, 3);
     
     let html = '';
@@ -139,11 +142,10 @@ function renderRandomProjects() {
     container.innerHTML = html;
 }
 
-// Load GitHub summary cards
 function loadGitHubSummary() {
     const container = document.getElementById('github-summary-cards');
     const loader = document.getElementById('gh-loading');
-    if (!container) return; // Null check
+    if (!container) return;
 
     const cards = [
         '0-profile-details.svg',
@@ -155,7 +157,7 @@ function loadGitHubSummary() {
     let html = '';
 
     cards.forEach((card, index) => {
-        const delay = index * 0.15; // Animation delay
+        const delay = index * 0.15;
         html += `
             <div class="col-lg-4 col-md-6" style="animation: fadeIn 0.5s ease-out ${delay}s both;">
                 <div class="card custom-card border-0 shadow-sm bg-white h-100 p-2 d-flex align-items-center justify-content-center github-stat-card">
@@ -165,14 +167,12 @@ function loadGitHubSummary() {
         `;
     });
 
-    // Hide spinner delay
     setTimeout(() => {
         if (loader) loader.style.display = 'none';
         container.innerHTML = html;
     }, 600);
 }
 
-// Init dark mode toggle
 function initDarkMode() {
     const darkModeToggle = document.getElementById('darkModeToggle');
     if (!darkModeToggle) return;
@@ -200,9 +200,65 @@ function initDarkMode() {
     });
 }
 
-// DOM ready init
+const NEW_PRODUCT_DURATION_DAYS = 14;
+const newProducts = [
+    {
+        text: "CyberShield Anti-Cheat Premium is now available!",
+        linkText: "Check it out &rarr;",
+        linkUrl: "cybersecurity.html",
+        target: "_self",
+        dateAdded: "2026-05-06"
+    }
+];
+
+function initAnnouncementBanner() {
+    const banner = document.getElementById('announcement-banner');
+    if (!banner) return;
+
+    const now = new Date();
+    const validProducts = newProducts.filter(product => {
+        const addedDate = new Date(product.dateAdded);
+        const diffTime = now - addedDate;
+        const diffDays = diffTime / (1000 * 60 * 60 * 24);
+        return diffDays <= NEW_PRODUCT_DURATION_DAYS && diffDays >= -1;
+    });
+
+    const navbar = document.querySelector('.custom-navbar');
+    const firstSection = document.querySelector('section');
+
+    if (validProducts.length === 0) {
+        banner.style.display = 'none';
+        if (navbar) navbar.style.top = '0px';
+        if (firstSection) {
+            if (firstSection.style.paddingTop === '120px') firstSection.style.paddingTop = '80px';
+            if (firstSection.style.marginTop === '120px') firstSection.style.marginTop = '80px';
+        }
+        return;
+    }
+
+    let currentIndex = 0;
+    function renderBanner() {
+        const product = validProducts[currentIndex];
+        banner.innerHTML = `
+            <div style="animation: slideInBottom 0.5s ease-out forwards;" class="w-100 text-center px-2">
+                <span class="badge bg-danger me-2">NEW</span> ${product.text} 
+                <a href="${product.linkUrl}" target="${product.target || '_self'}" class="text-info text-decoration-none fw-bold ms-2">${product.linkText}</a>
+            </div>
+        `;
+    }
+
+    renderBanner();
+    if (validProducts.length > 1) {
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % validProducts.length;
+            renderBanner();
+        }, 5000);
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     renderRandomProjects();
     loadGitHubSummary();
     initDarkMode();
+    initAnnouncementBanner();
 });
