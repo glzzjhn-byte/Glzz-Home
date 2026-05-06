@@ -1,0 +1,101 @@
+<!-- Copyright (c) GlzzJohn -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bon | Cyber Security</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <script>if(localStorage.getItem('darkMode') === 'enabled') document.body.classList.add('dark-mode');</script>
+    <div id="announcement-banner" class="bg-dark text-white d-flex align-items-center justify-content-center position-fixed w-100 shadow-sm" style="top: 0; height: 40px; z-index: 1040; font-size: 0.85rem; overflow: hidden; display: none;">
+    </div>
+    <nav class="navbar navbar-expand-md navbar-light fixed-top custom-navbar" style="top: 40px;">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <button class="btn btn-link text-dark text-decoration-none p-0 me-3" id="darkModeToggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon fs-5"></i>
+                </button>
+                <a class="navbar-brand fw-bold fs-3 text-dark mb-0" href="index.html">Bon</a>
+            </div>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-3 fw-medium">
+                    <li class="nav-item"><a class="nav-link text-dark" href="index.html">← Back to Portfolio</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="min-vh-100 py-5 bg-white" style="margin-top: 120px;">
+        <div class="container py-5">
+            <h1 class="display-4 fw-bold text-dark text-center mb-5">Cyber Security</h1>
+
+            <div>
+                <h2 class="display-6 fw-bold text-danger mb-4"><i class="fas fa-shield-halved me-3"></i>Roblox - Security</h2>
+                <div class="row g-4">
+                    
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 custom-card">
+                            <div class="project-image d-flex align-items-center justify-content-center fw-medium text-white" style="background: #e74c3c; font-size: 1.25rem;">
+                                <img src="Images/Shield.png" alt="CyberShield Premium" class="w-100 h-100" style="object-fit: cover;" onerror="this.outerHTML='CyberShield Premium'">
+                            </div>
+                            <div class="card-body p-4 d-flex flex-column z-1 bg-white">
+                                <div class="text-danger fw-bold mb-2"><i class="fas fa-fire me-2"></i>New! Premium</div>
+                                <h4 class="card-title fw-bold text-dark mb-3">CyberShield Anti-Cheat Premium</h4>
+                                <p class="card-text text-secondary mb-4">A premium, advanced anti-cheat solution. Features external communication via an API and webhooks for kick/ban logs, remote event abuse detection, and enhanced versions of speed and fly checks compared to the basic Simple Shield.</p>
+                                <div class="mt-auto">
+                                    <div class="d-flex flex-wrap gap-2 mb-3">
+                                        <span class="badge bg-light text-secondary rounded-pill px-3 py-2">Security</span>
+                                        <span class="badge bg-light text-secondary rounded-pill px-3 py-2">Premium ($10.99)</span>
+                                        <span class="badge bg-light text-secondary rounded-pill px-3 py-2">API</span>
+                                        <span class="badge bg-light text-secondary rounded-pill px-3 py-2">Luau</span>
+                                    </div>
+                                    <a href="https://create.roblox.com/store/asset/124778777859404/CyberShield-AntiCheat-Premium-AntiExploit" target="_blank" class="btn btn-link text-decoration-none p-0 fw-semibold text-primary">
+                                        <i class="fas fa-shield-alt me-2"></i>View Plugin →
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 custom-card">
+                            <div class="project-image d-flex align-items-center justify-content-center fw-medium text-dark" style="background: #fcfcfc; font-size: 1.25rem; height: 200px;">
+                                <img src="Images/SHIELD-removebg-preview.png" alt="SimpleShield" class="w-100 h-100" style="object-fit: cover;" onerror="this.outerHTML='SimpleShield Easy Anti-Cheat'">
+                            </div>
+                            <div class="card-body p-4 d-flex flex-column z-1 bg-white">
+                                <h4 class="card-title fw-bold text-dark mb-3">SimpleShield Easy Anti-Cheat</h4>
+                                <p class="card-text text-secondary mb-4">A highly accessible, drop-in anti-cheat plugin designed to secure interactive environments. It easily installs to provide instant, robust protection against common exploits like speed and fly hacking.</p>
+                                <div class="mt-auto">
+                                    <div class="d-flex flex-wrap gap-2 mb-3">
+                                        <span class="badge bg-light text-secondary rounded-pill px-3 py-2">Security</span>
+                                        <span class="badge bg-light text-secondary rounded-pill px-3 py-2">Free</span>
+                                        <span class="badge bg-light text-secondary rounded-pill px-3 py-2">Luau</span>
+                                    </div>
+                                    <a href="https://create.roblox.com/store/asset/100468824967185/SimpleShield-Easy-AntiCheat" target="_blank" class="btn btn-link text-decoration-none p-0 fw-semibold text-primary">
+                                        <i class="fas fa-shield-alt me-2"></i>View Plugin →
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white-50 text-center py-4 border-top border-secondary mt-auto">
+        <p>&copy; 2026 Bon. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
