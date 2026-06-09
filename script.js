@@ -227,7 +227,8 @@ function initAnnouncementBanner() {
     const firstSection = document.querySelector('section');
 
     if (validProducts.length === 0) {
-        banner.style.display = 'none';
+            banner.classList.remove('d-flex');
+            banner.classList.add('d-none');
         if (navbar) navbar.style.top = '0px';
         if (firstSection) {
             if (firstSection.style.paddingTop === '120px') firstSection.style.paddingTop = '80px';
@@ -235,6 +236,9 @@ function initAnnouncementBanner() {
         }
         return;
     }
+
+        banner.classList.remove('d-none');
+        banner.classList.add('d-flex');
 
     let currentIndex = 0;
     function renderBanner() {
