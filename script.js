@@ -59,8 +59,8 @@ const allProjectsData = [
     {
         imageText: '<div class="w-100 h-100 d-flex align-items-center justify-content-center text-white fw-bold" style="background: #e74c3c;">CyberShield Premium</div>',
         title: 'CyberShield Anti-Cheat Premium',
-        description: 'An advanced, premium anti-cheat featuring an external API, webhook logging, ban capability, remote event abuse detection, and enhanced movement checks.',
-        tags: ['Security', 'Premium ($10.99)', 'API', 'Luau'],
+        description: 'An advanced, premium anti-cheat. Now AI-assisted with a hardcoded neural network (still beta, still thinking for correct implementation), a heuristic behavior model analyzer, and a text-based AI analyzer.',
+        tags: ['Security', 'Free (Until Aug 31, 2026)', 'API', 'Luau'],
         actionHtml: '<a href="https://create.roblox.com/store/asset/124778777859404/CyberShield-AntiCheat-Premium-AntiExploit" target="_blank" class="btn btn-link text-decoration-none p-0 fw-semibold text-primary"><i class="fas fa-shield-alt me-2"></i>View Plugin →</a>'
     },
     {
