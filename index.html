@@ -1,28 +1,50 @@
 <!-- Copyright (c) GlzzJohn -->
 <!DOCTYPE html>
 <html lang="en">
+Updating your HTML's metadata—specifically the JSON-LD script (the "@context": "[https://schema.org](https://schema.org)" block)—is exactly how you feed this relationship directly to Google's web crawlers.
+
+To create a hard link between your real name, your @glzzjhn handle, your WakaTime profile, and your Maven dependency, we can upgrade your JSON-LD to use a @graph structure. This tells the crawler: "Here is a Person, here are all their profiles, and here is the Software they authored."
+
+Replace your entire <head> section with this updated version:
+
+HTML
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="9WgGEYs8OPE41W0Hd5cj4rrGhdmV6rmIx7hPFOpL4fo" />
     <meta name="author" content="John Gabriel Ronao">
     <meta name="description" content="Portfolio of John Gabriel Ronao (Bon), a 3rd-year Computer Engineering student at UST-L specializing in Systems, ML, and Cyber Security.">
-    
+    <meta name="keywords" content="John Gabriel Ronao, glzzjhn, glzzjhn-byte, Java Developer, WakaTime, Maven dependency, io.github.glzzjhn-byte, UST-L">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "John Gabriel Ronao",
-      "alternateName": ["Bon", "glzzjhn-byte", "glzzjhn"],
-      "jobTitle": "3rd-Year Computer Engineering Student",
-      "affiliation": {
-        "@type": "Organization",
-        "name": "UST-L"
-      },
-      "url": "https://glzzjhn-byte.github.io/Glzz-Home/",
-      "sameAs": [
-        "https://github.com/glzzjhn-byte",
-        "https://github.com/glzzjhn"
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://glzzjhn-byte.github.io/Glzz-Home/#person",
+          "name": "John Gabriel Ronao",
+          "alternateName": ["Bon", "glzzjhn-byte", "glzzjhn"],
+          "jobTitle": "3rd-Year Computer Engineering Student",
+          "affiliation": {
+            "@type": "Organization",
+            "name": "UST-L"
+          },
+          "url": "https://glzzjhn-byte.github.io/Glzz-Home/",
+          "sameAs": [
+            "https://github.com/glzzjhn-byte",
+            "https://github.com/glzzjhn",
+            "https://wakatime.com/@glzzjhn"
+          ]
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "FirstContribution",
+          "identifier": "io.github.glzzjhn-byte:FirstContribution:1.2.0",
+          "programmingLanguage": "Java",
+          "author": {
+            "@id": "https://glzzjhn-byte.github.io/Glzz-Home/#person"
+          }
+        }
       ]
     }
     </script>
@@ -173,6 +195,51 @@
             </div>
             <div class="text-center mt-5">
                 <a href="websites.html" class="btn btn-outline-primary rounded-pill px-4 py-2 fw-semibold custom-btn-hover">View All Websites →</a>
+            </div>
+        </div>
+    </section>
+    <section id="open-source" class="py-5 bg-light border-top">
+        <div class="container py-5">
+            <h2 class="display-5 fw-bold text-dark text-center mb-5">Open Source & Analytics</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-5">
+                    <div class="card h-100 custom-card shadow-sm border-0">
+                        <div class="card-body p-4 d-flex flex-column bg-white">
+                            <h4 class="card-title fw-bold text-dark mb-3">
+                                <i class="fas fa-box-open me-2 text-primary"></i>Published Packages
+                            </h4>
+                            <p class="text-secondary mb-4">My open-source Java contributions, packaged and available via Maven Central.</p>
+                            
+                            <div class="bg-dark rounded p-3 mt-auto overflow-auto shadow-inner">
+<pre class="text-light mb-0" style="font-family: monospace; font-size: 0.85rem;">
+&lt;dependency&gt;
+    &lt;groupId&gt;io.github.glzzjhn-byte&lt;/groupId&gt;
+    &lt;artifactId&gt;FirstContribution&lt;/artifactId&gt;
+    &lt;version&gt;1.2.0&lt;/version&gt;
+&lt;/dependency&gt;
+</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="card h-100 custom-card shadow-sm border-0">
+                        <div class="card-body p-4 d-flex flex-column bg-white text-center justify-content-center">
+                            <h4 class="card-title fw-bold text-dark mb-3">
+                                <i class="fas fa-chart-pie me-2 text-primary"></i>Coding Activity
+                            </h4>
+                            <p class="text-secondary mb-4">Tracking my development time, language usage, and consistency across environments.</p>
+                            
+                            <div class="mt-auto py-3">
+                                <h5 class="fw-bold text-dark mb-3">John Gabriel Ronao</h5>
+                                <a href="https://wakatime.com/@glzzjhn" target="_blank" class="btn btn-primary rounded-pill px-4 py-2 fw-semibold shadow-sm custom-btn-hover">
+                                    <i class="fas fa-code me-2"></i>View @glzzjhn on WakaTime
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
