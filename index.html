@@ -1,20 +1,13 @@
 <!-- Copyright (c) GlzzJohn -->
 <!DOCTYPE html>
 <html lang="en">
-Updating your HTML's metadata—specifically the JSON-LD script (the "@context": "[https://schema.org](https://schema.org)" block)—is exactly how you feed this relationship directly to Google's web crawlers.
-
-To create a hard link between your real name, your @glzzjhn handle, your WakaTime profile, and your Maven dependency, we can upgrade your JSON-LD to use a @graph structure. This tells the crawler: "Here is a Person, here are all their profiles, and here is the Software they authored."
-
-Replace your entire <head> section with this updated version:
-
-HTML
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="9WgGEYs8OPE41W0Hd5cj4rrGhdmV6rmIx7hPFOpL4fo" />
     <meta name="author" content="John Gabriel Ronao">
-    <meta name="description" content="Portfolio of John Gabriel Ronao (Bon), a 3rd-year Computer Engineering student at UST-L specializing in Systems, ML, and Cyber Security.">
-    <meta name="keywords" content="John Gabriel Ronao, glzzjhn, glzzjhn-byte, Java Developer, WakaTime, Maven dependency, io.github.glzzjhn-byte, UST-L">
+    <meta name="description" content="Portfolio of John Gabriel Ronao (Bon), a 3rd-year Computer Engineering student at UST-L and Roblox Developer specializing in Systems, ML, Cyber Security, and Luau programming.">
+    <meta name="keywords" content="John Gabriel Ronao, glzzjhn, glzzjhn-byte, Java Developer, Roblox Developer, Luau, WakaTime, Maven dependency, io.github.glzzjhn-byte, UST-L">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -24,7 +17,10 @@ HTML
           "@id": "https://glzzjhn-byte.github.io/Glzz-Home/#person",
           "name": "John Gabriel Ronao",
           "alternateName": ["Bon", "glzzjhn-byte", "glzzjhn"],
-          "jobTitle": "3rd-Year Computer Engineering Student",
+          "jobTitle": [
+            "3rd-Year Computer Engineering Student",
+            "Roblox Developer"
+          ],
           "affiliation": {
             "@type": "Organization",
             "name": "UST-L"
@@ -33,7 +29,8 @@ HTML
           "sameAs": [
             "https://github.com/glzzjhn-byte",
             "https://github.com/glzzjhn",
-            "https://wakatime.com/@glzzjhn"
+            "https://wakatime.com/@glzzjhn",
+            "https://www.roblox.com/users/2709443299/profile"
           ]
         },
         {
